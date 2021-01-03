@@ -27,6 +27,8 @@ public class HighArrayApp {
         arr.delete(55);
         arr.delete(99);
         arr.display(); // Повторный вывод
+        arr.getMax();
+        arr.display();
     }
 } // Конец класса HighArrayApp
 ////////////////////////////////////////////////////////////////

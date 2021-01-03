@@ -45,15 +45,21 @@ public class HighArray {
         }
     }
     public long getMax(){
-        if (a.length == 0){
+        if (nElems == 0){
             return -1;
         }
         long max = 0;
-        for (int i = 0; i < a.length; i++) {
+        int index = 0;
+        for (int i = 0; i < nElems; i++) {
             if (a[i] > max) {
                 max = a[i];
+                index = i;
             }
         }
+        for (int i = index; i < nElems; i++) {
+            a[i] = a[i+1];
+        }
+        nElems--;
         return max;
     }
     //-----------------------------------------------------------
