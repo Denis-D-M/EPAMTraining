@@ -44,7 +44,7 @@ public class HighArray {
             return true;
         }
     }
-    public long getMax(){
+    public long removeMax(){
         if (nElems == 0){
             return -1;
         }
