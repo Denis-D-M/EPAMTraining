@@ -44,6 +44,18 @@ public class HighArray {
             return true;
         }
     }
+    public long getMax(){
+        if (a.length == 0){
+            return -1;
+        }
+        long max = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+        return max;
+    }
     //-----------------------------------------------------------
     public void display() // Вывод содержимого массива
     {
