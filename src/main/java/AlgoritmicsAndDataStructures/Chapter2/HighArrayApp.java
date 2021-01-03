@@ -27,8 +27,13 @@ public class HighArrayApp {
         arr.delete(55);
         arr.delete(99);
         arr.display(); // Повторный вывод
-        arr.getMax();
-        arr.display();
+        long[] secondArray = new long[7];
+        for (int i = 6; i >= 0; i--) {
+            secondArray[i] = arr.removeMax();
+        }
+        for (long l : secondArray) {
+            System.out.print(l + " ");
+        }
     }
 } // Конец класса HighArrayApp
 ////////////////////////////////////////////////////////////////
