@@ -38,11 +38,30 @@ class OrdArray {
     public void insert(long value) // Вставка элемента в массив
     {
         int j;
-        for(j=0; j<nElems; j++) // Определение позиции вставки
-            if(a[j] > value) // (линейный поиск)
+        int lowerBound = 0;
+        int upperBound = nElems-1;
+        int curIn;
+        while(true)
+        {
+            curIn = (lowerBound + upperBound ) / 2;
+            if(curIn == 0 || a[curIn] > a[curIn - 1] && a[curIn] < a[curIn + 1]) {
+                j = curIn;
                 break;
-        for(int k=nElems; k>j; k--) // Перемещение последующих элементов
-            a[k] = a[k-1];
+            }
+            else if(lowerBound > upperBound) {
+                j = curIn;
+                break;
+            }
+            else // Деление диапазона
+            {
+                if(a[curIn] < value)
+                    lowerBound = curIn + 1; // В верхней половине
+                else
+                    upperBound = curIn - 1; // В нижней половине
+            }
+        }
+        for(int k=j; k<nElems - 1; k++) // Перемещение последующих элементов
+            a[k] = a[k+1];
         a[j] = value; // Вставка
         nElems++; // Увеличение размера
     }
