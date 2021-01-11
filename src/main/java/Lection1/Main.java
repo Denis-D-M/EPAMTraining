@@ -27,8 +27,6 @@ public class Main  {
         String[] arr = s.split(" ");
         System.out.println(Arrays.toString(arr));
         System.out.println(new StringBuffer(s).reverse());
-
-
-
+        
     }
 }
