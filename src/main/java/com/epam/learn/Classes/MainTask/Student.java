@@ -22,9 +22,6 @@ public class Student {
         this.studentClass = studentClass;
         this.group = group;
     }
-    public Student() {
-
-    }
 
     @Override
     public String toString() {
