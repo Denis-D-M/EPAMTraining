@@ -8,4 +8,12 @@ public class MegaSuperClass {
     public void coolMethod(){
         System.out.println("Это первый крутой метод");
     }
+
+
+
+
+
+
+
+    
 }
