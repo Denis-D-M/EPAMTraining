@@ -9,11 +9,4 @@ public class MegaSuperClass {
         System.out.println("Это первый крутой метод");
     }
 
-
-
-
-
-
-
-    
 }
