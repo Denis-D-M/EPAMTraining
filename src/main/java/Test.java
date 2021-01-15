@@ -13,5 +13,10 @@ public class Test {
     }public void doS(ArrayList list){
         System.out.println(3);
     }
+    Integer someMethod(){
+        return 1;
+    }
+    public void someMethodInFuture(){
 
+    }
 }
