@@ -1,22 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Test {
-    public static void main(String[] args) {
-        Test test = new Test();
-        test.doS(null);
-    }
-    public void doS(Object obj){
-        System.out.println(1);
-    }public void doS(List list){
-        System.out.println(2);
-    }public void doS(ArrayList list){
-        System.out.println(3);
-    }
-    Integer someMethod(){
-        return 1;
-    }
-    public void someMethodInFuture(){
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Dot dot = new Dot();
+        dot.x = 1;
+        dot.y = 2;
+        dot.a = new A();
+        dot.a.z = 10;
+        Dot dot2 = (Dot) dot.clone();
+        System.out.println(dot2.x);
+        System.out.println(dot2.y);
+        System.out.println(dot2.a.z);
 
     }
 }
