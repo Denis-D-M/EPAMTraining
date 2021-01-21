@@ -37,4 +37,30 @@ public class SimpleGenericList<T> implements GenericCollection<T>{
             System.out.println(t);
         }
     }
+    public static <T> Iterable<T> nCopies(T value, int count){
+        if (count < 0){
+            throw new IllegalArgumentException("Negative count - " + count);
+        }
+        return new Iterable<T>() {
+            @Override
+            public Iterator<T> iterator() {
+                return new Iterator<T>() {
+                    int rest = count;
+                    @Override
+                    public boolean hasNext() {
+                        return false;
+                    }
+
+                    @Override
+                    public T next() {
+                        return null;
+                    }
+                };
+            }
+        };
+
+
+
+    }
 }
+
