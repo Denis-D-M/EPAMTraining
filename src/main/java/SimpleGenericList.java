@@ -58,9 +58,13 @@ public class SimpleGenericList<T> implements GenericCollection<T>{
                 };
             }
         };
-
-
-
     }
+//    public void printAll(){
+//        Iterator<T> iterator = list.iterator();
+//        while(iterator.hasNext()){
+//            T t = iterator.next();
+//            System.out.println(t);
+//        }
+//    }
 }
 
