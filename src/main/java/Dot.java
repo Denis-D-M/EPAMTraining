@@ -4,8 +4,10 @@ public class Dot implements Cloneable {
     A a;
 
     @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Dot clone() throws CloneNotSupportedException {
+        Dot dot = (Dot) super.clone();
+        dot.a = a.clone();
+        return dot;
     }
 }
 

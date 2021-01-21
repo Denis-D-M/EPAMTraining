@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class SimpleGenericList<T> implements GenericCollection<T>{
@@ -7,6 +8,11 @@ public class SimpleGenericList<T> implements GenericCollection<T>{
     @Override
     public T getElem(int index) {
         return list.get(index);
+    }
+
+    @Override
+    public void add(T elem) {
+        list.add(elem);
     }
 
     @Override
@@ -23,5 +29,12 @@ public class SimpleGenericList<T> implements GenericCollection<T>{
     }
     public <U> void foo(List<U> list){
         list.set(0, list.get(0));
+    }
+    public void printAll(){
+        Iterator<T> iterator = list.iterator();
+        while(iterator.hasNext()){
+            T t = iterator.next();
+            System.out.println(t);
+        }
     }
 }
