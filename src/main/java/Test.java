@@ -1,5 +1,6 @@
+import java.awt.*;
 import java.io.FileReader;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -61,7 +62,36 @@ public class Test {
 //        A a = new A();
 //        A.V v = new A.V();
 //        List list = new ArrayList();
-        System.out.println(exc());
+        Queue<String> queue = new LinkedList<>() {
+            {
+                this.add("asd");
+            }
+        };
+        queue.add("dasdasd");
+        queue.add("asds");
+        queue.add("asd");
+        System.out.println(queue);
+        List<Person> list = new ArrayList<>();
+        list.add(new Person("Denis", "1"));
+        list.add(new Person("Anton", "2"));
+        list.add(new Person("Nikita", "3"));
+        list.add(new Person("Aleksei", "4"));
+//        Queue<Person> queue1 = new LinkedList<>();
+//        Queue<Person> queue2 = new PriorityQueue<>();
+//        queue2.add(new Person("Samuel", "asd"));
+//        queue2.add(new Person("Samuel", "asd"));
+//        queue2.add(new Person("Samuel", "asd"));
+//        queue2.add(new Person("Samuel", "asd"));
+//        queue2.add(new Person("Samuel", "asd"));
+        System.out.println(list);
+        ListIterator<Person> iterator = list.listIterator();
+        while (iterator.hasNext()){
+            Person p = iterator.next();
+            p = null;
+        }
+        System.out.println(list);
+        
+
 
     }
 
@@ -86,29 +116,3 @@ public class Test {
     }
 }
 
-class Person {
-
-    private String name;
-    private Account account;
-
-    Person(String name, String password) {
-        this.name = name;
-        account = new Account(password);
-    }
-
-    public void displayPerson() {
-        System.out.printf("Person \t Name: %s \t Password: %s \n", name, account.password);
-    }
-
-    private class Account {
-        private String password;
-
-        Account(String pass) {
-            this.password = pass;
-        }
-
-        void displayAccount() {
-            System.out.printf("Account Login: %s \t Password: %s \n", Person.this.name, password);
-        }
-    }
-}
