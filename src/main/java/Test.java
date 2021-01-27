@@ -90,8 +90,6 @@ public class Test {
             p = null;
         }
         System.out.println(list);
-        
-
 
     }
 
