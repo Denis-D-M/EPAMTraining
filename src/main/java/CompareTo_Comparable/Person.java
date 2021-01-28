@@ -3,6 +3,7 @@ package CompareTo_Comparable;
 public class Person implements Comparable<Person> {
     String name;
     int age;
+    private final long serialVersionUID = 1345345435L;
 
     @Override
     public int compareTo(Person o) {

@@ -20,6 +20,5 @@ public class Main {
         for (Person p : nameSortedSet) {
             System.out.println(p);
         }
-
     }
 }
