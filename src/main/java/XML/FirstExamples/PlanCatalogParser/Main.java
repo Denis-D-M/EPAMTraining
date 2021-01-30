@@ -13,11 +13,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
-        File file = new File("plan_catalog.xml");
-
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder documentBuilder = factory.newDocumentBuilder();
-        Document document = documentBuilder.parse(file);
+        Document document = getDocument("plan_catalog.xml");
         NodeList nodeList = document.getFirstChild().getChildNodes();
         Catalog catalog = new Catalog();
         for (int i = 0; i < nodeList.getLength(); i++) {
@@ -53,5 +49,12 @@ public class Main {
         System.out.println(catalog);
 
 
+    }
+
+    public static Document getDocument(String path) throws IOException, SAXException, ParserConfigurationException {
+        File file = new File(path);
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+        return documentBuilder.parse(file);
     }
 }
