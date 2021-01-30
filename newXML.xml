@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <persons>
+        <person attr1 = "123123" attr2 = "123534">
+            <firstName>Anton</firstName>
+            <lastName>Yudin</lastName>
+            <phones>
+                <phone type="mobile">89124324567</phone>
+                <phone type="work">84952342344</phone>
+            </phones>
+        </person>
+        <person>
+            <firstName>Denis</firstName>
+            <lastName>Mishin</lastName>
+        </person>
+        <person>
+            <firstName>Ruslan</firstName>
+            <lastName>Chanorov</lastName>
+        </person>
+        <person>
+            <firstName>Ivan</firstName>
+            <lastName>Ivanov</lastName>
+        </person>
+    </persons>
+</root>
