@@ -23,6 +23,13 @@ public class DOMXmlWriter {
         list.add(new Person("Sergey", 23));
         list.add(new Person("Larisa", 21));
         list.add(new Person("Dmitriy", 20));
+        
+        List<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog("Bobik", 4, true));
+        dogs.add(new Dog("Sharik", 4, true));
+        dogs.add(new Dog("Pushok", 4, false));
+        dogs.add(new Dog("Baltazar", 4, true));
+        dogs.add(new Dog("Carl", 4, false));
 
         DOMXmlWriter xmlWriter = new DOMXmlWriter();
         Document document = null;
@@ -36,6 +43,7 @@ public class DOMXmlWriter {
         try {
             assert document != null;
             xmlWriter.writeList(document, list);
+//            xmlWriter.writeList(document, dogs);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -55,15 +63,15 @@ public class DOMXmlWriter {
     public <T> void writeList(Document document, List<T> list) throws IllegalAccessException {
         Element root = document.createElement("root");
         document.appendChild(root);
-        Field[] personFields = Person.class.getDeclaredFields();
+        Field[] personFields = list.get(0).getClass().getDeclaredFields();
         for (T t : list) {
-            Element person = document.createElement("person");
-            root.appendChild(person);
+            Element elem = document.createElement(t.getClass().getSimpleName().toLowerCase());
+            root.appendChild(elem);
             for (Field field : personFields) {
                 field.setAccessible(true);
                 Element ElemI = document.createElement(field.getName());
                 ElemI.setTextContent(field.get(t).toString());
-                person.appendChild(ElemI);
+                elem.appendChild(ElemI);
             }
         }
     }
