@@ -1,4 +1,4 @@
-package XML.FirstExamples.PlanCatalogParser;
+package XML.FirstExamples.DOMPlanCatalogParser;
 
 import java.util.ArrayList;
 import java.util.List;

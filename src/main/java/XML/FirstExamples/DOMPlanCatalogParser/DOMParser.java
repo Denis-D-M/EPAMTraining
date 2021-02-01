@@ -1,4 +1,4 @@
-package XML.FirstExamples.PlanCatalogParser;
+package XML.FirstExamples.DOMPlanCatalogParser;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -11,7 +11,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-public class Main {
+public class DOMParser {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         Document document = getDocument("plan_catalog.xml");
         Catalog catalog = parsePlants(document);
@@ -21,8 +21,7 @@ public class Main {
     public static Document getDocument(String path) throws IOException, SAXException, ParserConfigurationException {
         File file = new File(path);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder documentBuilder = factory.newDocumentBuilder();
-        return documentBuilder.parse(file);
+        return factory.newDocumentBuilder().parse(file);
     }
 
     public static Catalog parsePlants(Document document) {

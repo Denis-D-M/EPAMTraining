@@ -1,4 +1,4 @@
-package XML.FirstExamples.PlanCatalogParser;
+package XML.FirstExamples.DOMPlanCatalogParser;
 
 public class Plant {
     private String common;
@@ -15,30 +15,6 @@ public class Plant {
         this.light = light;
         this.price = price;
         this.availability = availability;
-    }
-
-    public String getCommon() {
-        return common;
-    }
-
-    public String getBotanical() {
-        return botanical;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public String getLight() {
-        return light;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public int getAvailability() {
-        return availability;
     }
 
     @Override
