@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <person>
+        <name>Denis</name>
+        <age>20</age>
+    </person>
+    <person>
+        <name>Anton</name>
+        <age>22</age>
+    </person>
+    <person>
+        <name>Misha</name>
+        <age>19</age>
+    </person>
+    <person>
+        <name>Sergey</name>
+        <age>23</age>
+    </person>
+    <person>
+        <name>Larisa</name>
+        <age>21</age>
+    </person>
+    <person>
+        <name>Dmitriy</name>
+        <age>20</age>
+    </person>
+</root>
