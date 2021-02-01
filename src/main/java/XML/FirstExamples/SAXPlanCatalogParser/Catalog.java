@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Catalog {
-    private List<Plant> plants = new ArrayList<>();
+    private final List<Plant> plants = new ArrayList<>();
 
     @Override
     public String toString() {
