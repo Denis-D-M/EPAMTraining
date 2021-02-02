@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="CATALOG">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="PLANT" type="PLANT" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="PLANT">
+        <xsd:sequence>
+            <xsd:element name="COMMON" type="xsd:string"/>
+            <xsd:element name="BOTANICAL" type="xsd:string"/>
+            <xsd:element name="ZONE" type="xsd:string"/>
+            <xsd:element name="LIGHT" type="xsd:string"/>
+            <xsd:element name="PRICE" type="xsd:string"/>
+            <xsd:element name="AVAILABILITY" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

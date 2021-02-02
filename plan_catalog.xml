@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<CATALOG>
+<!--<!DOCTYPE CATALOG SYSTEM "plan_catalog.dtd">-->
+
+<CATALOG xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="plan_catalog.xsd">
     <PLANT>
         <COMMON>Кровавый корень</COMMON>
         <BOTANICAL>Sanguinaria canadensis</BOTANICAL>

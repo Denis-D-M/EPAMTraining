@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<!DOCTYPE root [-->
+<!--        <!ELEMENT root (person*)>-->
+<!--        <!ELEMENT person (name, age)>-->
+<!--        <!ELEMENT name (#PCDATA)>-->
+<!--        <!ELEMENT age (#PCDATA)>-->
+<!--        ]>-->
 <root>
     <person>
         <name>Denis</name>
