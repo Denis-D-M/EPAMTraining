@@ -18,9 +18,8 @@ public class DOMParser {
     }
 
     public static Document getDocument(String path) throws IOException, SAXException, ParserConfigurationException {
-        File file = new File(path);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        return factory.newDocumentBuilder().parse(file);
+        return factory.newDocumentBuilder().parse(new File(path));
     }
 
     public static Catalog parsePlants(Document document) {
@@ -36,6 +35,7 @@ public class DOMParser {
         return catalog;
     }
 
+    //переделать через setter
     public static Plant parsePlant(Node plant) {
         NodeList elementsOfPlant = plant.getChildNodes();
         String common = "";

@@ -8,8 +8,10 @@ import java.util.List;
 
 @XmlRootElement
 public class Persons {
+
     @XmlElement(name = "person")
     private List<Person> personList = new ArrayList<>();
+
     public Persons(){}
     public void add(Person p){
         personList.add(p);
